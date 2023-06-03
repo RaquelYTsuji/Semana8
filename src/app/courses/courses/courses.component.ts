@@ -13,7 +13,7 @@ import { catchError, Observable, of } from "rxjs";
   templateUrl: './courses.component.html',
   styleUrls: ['./courses.component.scss']
 })
-export class CoursesComponent implements OnInit{
+export class CoursesComponent{
   courses$: Observable<Course[]>
   displayedColumns = ['name', 'category', 'actions'];
 
@@ -37,10 +37,6 @@ export class CoursesComponent implements OnInit{
     this.dialog.open(ErrorDialogComponent, {
       data: errorMsg
     });
-  }
-
-  ngOnInit(): void {
-
   }
 
   onAdd() {
