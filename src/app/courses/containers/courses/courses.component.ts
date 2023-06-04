@@ -1,10 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
-import {ActivatedRoute, Router} from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
-import { Course } from "../model/course";
-import { CoursesService } from "../service/courses.service";
-import { ErrorDialogComponent } from "../../shared/components/error-dialog/error-dialog.component";
+import { Course } from "../../model/course";
+import { CoursesService } from "../../service/courses.service";
+import { ErrorDialogComponent } from "../../../shared/components/error-dialog/error-dialog.component";
 
 import { catchError, Observable, of } from "rxjs";
 
@@ -15,7 +15,6 @@ import { catchError, Observable, of } from "rxjs";
 })
 export class CoursesComponent{
   courses$: Observable<Course[]>
-  displayedColumns = ['name', 'category', 'actions'];
 
   constructor(
     private coursesService: CoursesService,
